@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -12,6 +14,9 @@ public class GameActivity extends AppCompatActivity {
 
     private int level;
     private LinearLayout linearLayout;
+    private EditText ans;
+    private TextView ques;
+    private Button submit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +26,9 @@ public class GameActivity extends AppCompatActivity {
         level=SP.getInt(C.USER_LEVEL);
 
         linearLayout=findViewById(R.id.linearLayout);
+        ans=findViewById(R.id.ans);
+        submit=findViewById(R.id.submit);
+        ques=findViewById(R.id.question);
 
         if(level==1)
         {
