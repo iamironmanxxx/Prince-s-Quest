@@ -27,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
             finish();
         }
+        else if(level==1)
+        {
+            Intent i= new Intent(MainActivity.this,GameActivity.class);
+            startActivity(i);
+            finish();
+
+        }
     }
 
     

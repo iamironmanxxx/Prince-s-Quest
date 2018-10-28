@@ -21,7 +21,7 @@
             Alice
         </item>
         <item>
-            Bob
+            Joan
         </item>
     </string-array>
     <string-array name="name2">
@@ -29,7 +29,7 @@
             Claire
         </item>
         <item>
-            Desmond
+            Alison
         </item>
     </string-array>
 </resources>

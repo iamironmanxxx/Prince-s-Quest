@@ -36,12 +36,13 @@ public class GameActivity extends AppCompatActivity {
 
         if(level==1)
         {
-            inflateLayout(2,1);
+            inflateLayout(2,level);
         }
 
     }
 
     private void inflateLayout(int people, final int level) {
+        linearLayout.removeAllViews();
         String name[];
         if(level==1)
         {
@@ -53,13 +54,13 @@ public class GameActivity extends AppCompatActivity {
         }
         for(int i=0;i<people;i++)
         {
-            View view= LayoutInflater.from(this).inflate(R.layout.knight,null);
+            final View view= LayoutInflater.from(this).inflate(R.layout.knight,null);
             TextView tv=view.findViewById(R.id.text);
             tv.setText(name[i]);
             final int finalI = i;
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
+                public void onClick(View btn) {
                     String ar[];
                     if(level==1)
                     {
@@ -72,11 +73,12 @@ public class GameActivity extends AppCompatActivity {
                     AlertDialog dialog=new AlertDialog.Builder(GameActivity.this).create();
                     View v=LayoutInflater.from(GameActivity.this).inflate(R.layout.dialog,null);
                     dialog.setView(v);
+                    dialog.show();
                     TextView message=v.findViewById(R.id.knightText);
                     message.setText(ar[finalI]);
-
                 }
             });
+            linearLayout.addView(view);
         }
     }
 

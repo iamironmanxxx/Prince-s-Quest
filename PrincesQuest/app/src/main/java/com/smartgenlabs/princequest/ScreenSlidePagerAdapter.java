@@ -35,17 +35,7 @@ public class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
             case 1: sf.setText(context.getString(R.string.story2));
                     break;
             case 2: sf.setText(context.getString(R.string.story3));
-                    sf.getText().setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            SharedPreference SP=new SharedPreference(context);
-                            SP.set(C.USER_LEVEL,1);
-                            Intent i=new Intent(context,GameActivity.class);
-                            context.startActivity(i);
-                            AppCompatActivity activity=(AppCompatActivity)context;
-                            activity.finish();
-                        }
-                    });
+                    sf.setPosition(2);
                     break;
         }
 
