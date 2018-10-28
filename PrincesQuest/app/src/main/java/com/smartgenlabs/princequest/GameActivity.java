@@ -34,6 +34,12 @@ public class GameActivity extends AppCompatActivity {
         ans=findViewById(R.id.ans);
         submit=findViewById(R.id.submit);
         ques=findViewById(R.id.question);
+        if(level==3)
+        {
+            Intent i=new Intent (GameActivity.this,EndGameActivity.class);
+            startActivity(i);
+            finish();
+        }
 
         if(level==1)
         {
@@ -44,10 +50,6 @@ public class GameActivity extends AppCompatActivity {
         {
             inflateLayout(2,level);
             ques.setText(getString(R.string.q2));
-        }
-        else
-        {
-
         }
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -114,6 +116,7 @@ public class GameActivity extends AppCompatActivity {
                     AlertDialog dialog=new AlertDialog.Builder(GameActivity.this).create();
                     View v=LayoutInflater.from(GameActivity.this).inflate(R.layout.dialog,null);
                     dialog.setView(v);
+                    dialog.getWindow().setBackgroundDrawableResource(R.color.transparent);
                     dialog.show();
                     TextView message=v.findViewById(R.id.knightText);
                     message.setText(ar[finalI]);

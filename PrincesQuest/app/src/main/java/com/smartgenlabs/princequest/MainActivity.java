@@ -27,12 +27,17 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
             finish();
         }
-        else if(level==1)
-        {
-            Intent i= new Intent(MainActivity.this,GameActivity.class);
+        else if(level==1||level==2) {
+            Intent i = new Intent(MainActivity.this, GameActivity.class);
             startActivity(i);
             finish();
 
+        }
+        else
+        {
+            Intent i = new Intent(MainActivity.this, EndGameActivity.class);
+            startActivity(i);
+            finish();
         }
     }
 

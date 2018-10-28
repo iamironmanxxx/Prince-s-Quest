@@ -6,7 +6,7 @@
     <string name="story1">Once upon a time, there lived a Prince and a Princess.
     They lived happily until one day, when a Dragon kidnapped the Princess.\n\n(Swipe to go ahead)</string>
     <string name="story2">The Prince was sad but determined to rescue his love.\n\n(Swipe to go ahead)</string>
-    <string name="story3">So he started his Quest of finding the Dragon and saving the Princess.\n\n(Click here to go ahead)</string>
+    <string name="story3">So he started his Quest of finding the Dragon and saving the Princess. He lands on a strange land where there are two kind of people,Knights and Knaves. They look exactly the same but Knights always tell the truth while Knaves always lie. Based on this fact, he must answer the questions on his way to find the Princess.\n\n(Click here to go ahead)</string>
     <string name="q1">What is Alice</string>
     <string name="ans1">Knight</string>
     <string name="q2">What is Claire?</string>
