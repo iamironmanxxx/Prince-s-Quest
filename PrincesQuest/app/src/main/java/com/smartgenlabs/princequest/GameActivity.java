@@ -3,12 +3,14 @@ package com.smartgenlabs.princequest;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.view.Window;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -20,7 +22,9 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_game);
+        getSupportActionBar().hide();
 
         SharedPreference SP=new SharedPreference(this);
         level=SP.getInt(C.USER_LEVEL);
