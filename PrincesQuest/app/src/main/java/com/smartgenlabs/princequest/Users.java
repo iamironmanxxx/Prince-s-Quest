@@ -46,6 +46,7 @@ public class Users {
 
     public int getLevelSP(SharedPreference SP){
         return SP.getInt("user_level");
+
     }
 
 }
