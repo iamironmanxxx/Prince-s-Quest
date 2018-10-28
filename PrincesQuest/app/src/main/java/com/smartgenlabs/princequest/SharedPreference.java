@@ -52,6 +52,20 @@ public class SharedPreference {
         set("firstAdShown",false);
         set(IS_LOGGED_IN,false);
 
+
+
+    }
+
+    public void clearSP(){
+        SharedPreferences settings;
+        Editor editor;
+
+        //settings = PreferenceManager.getDefaultSharedPreferences(context);
+        settings = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE); //1
+        editor = settings.edit(); //2
+
+        editor.clear();
+        editor.apply(); //4
     }
 
     public void set(String key, String value) {

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EndGameActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        />
+
+    <TextView
+        android:id="@+id/startup_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startup_subtitle"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:background="#AAFFFFFF"
+        android:elevation="1dp"
+        android:text="XFW"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        app:srcCompat="@drawable/logo200"
+        />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/imageView2"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/startup_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:background="#6000"
+        android:text="Congratulations!"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/startup_subtitle"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/black" />
+
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view2"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#7fff"
+        android:padding="4dp"
+        android:text="Well done Prince! Good Job saving your beloved princess."
+        android:textAlignment="center"
+        android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/quest_end_btn"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:paddingBottom="5dp"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:text="Thus ends your Quest"
+        android:textAlignment="center"
+        android:textColor="#7b4602"
+        android:textSize="18sp" />
+
+
+
+</RelativeLayout>
+
+
