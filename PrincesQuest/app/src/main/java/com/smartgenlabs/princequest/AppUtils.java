@@ -23,47 +23,5 @@ import javax.annotation.Nullable;
 public class AppUtils {
 
 
-    public static FirebaseUser currentUser;
-    public static XfwUser currentUserLocal;
-
-    public static void setCurrentUserListener(final Context context, String uid) {
-        final DocumentReference userRef = FirebaseFirestore.getInstance().collection("users").document(uid);
-
-        userRef.addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot document, @Nullable FirebaseFirestoreException e) {
-                if (e != null) {
-                    M.showNoticeAlert(context, "Error!", "Some error occurred while fetching user data. Please try after some time");
-
-                } else if (document.exists()) {
-                    XfwUser curUserLocal = document.toObject(XfwUser.class);
-                    AppUtils.currentUserLocal = curUserLocal;
-                    AppUtils.currentUserLocal.setUid(document.getId());
-                    //Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-
-                    if (curUserLocal.isAuthority()) {
-                        SharedPreference.set(context, C.IS_AUTHORITY, true);
-                        FirebaseMessaging.getInstance().subscribeToTopic(C.FCM_TOPIC_AUTHORITY);
-                    } else SharedPreference.set(context, C.IS_AUTHORITY, false);
-
-                    if (curUserLocal.isAdmin()) {
-                        SharedPreference.set(context, C.IS_ADMIN, true);
-                        FirebaseMessaging.getInstance().subscribeToTopic(C.FCM_TOPIC_ADMIN);
-                    } else SharedPreference.set(context, C.IS_ADMIN, false);
-
-                    if (document.contains(C.TEXT_DISPLAY_NAME))
-                        SharedPreference.set(context, C.TEXT_DISPLAY_NAME, document.getString(C.TEXT_DISPLAY_NAME));
-                    if (!curUserLocal.getAndroid_fcm_token().equals(FirebaseInstanceId.getInstance().getToken())) {
-                        Map<String, Object> fcmToken = new HashMap<>();
-                        fcmToken.put(C.TEXT_FCM_TOKEN, FirebaseInstanceId.getInstance().getToken());
-                        userRef.set(fcmToken, SetOptions.merge());
-                    }
-                } else {
-                    //   Log.d("User data", "No User data found");
-                }
-            }
-        });
-    }
-
-
+   
 }
