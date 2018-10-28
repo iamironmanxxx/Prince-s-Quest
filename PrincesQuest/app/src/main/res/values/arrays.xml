@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="level1">
+        <item>
+            At least one of us is a Knave.
+        </item>
+        <item>
+            ...
+        </item>
+    </string-array>
+    <string-array name="level2">
+        <item>
+            We are both Knights!
+        </item>
+        <item>
+            "Either Claire is a Knight or I am a Knight, but we are not both Knights."
+        </item>
+    </string-array>
+    <string-array name="name1">
+        <item>
+            Alice
+        </item>
+        <item>
+            Bob
+        </item>
+    </string-array>
+    <string-array name="name2">
+        <item>
+            Claire
+        </item>
+        <item>
+            Desmond
+        </item>
+    </string-array>
+</resources>
