@@ -29,7 +29,7 @@ public class C {
     public static final String TEXT_CURRENT_VERSION_NAME = "currentVersionName";
     public static final String PRODUCT_IMAGES_DIR = "product_images/";
 
-
+    public static final String USER_LEVEL="user_level";
 
     public static SimpleDateFormat imgUpdatedSaveDf = new SimpleDateFormat("ddHHmmss", Locale.ENGLISH);
     
