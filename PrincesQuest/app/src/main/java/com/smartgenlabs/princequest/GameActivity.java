@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.view.Window;
+import android.widget.Toast;
 
 public class GameActivity extends AppCompatActivity {
 
@@ -67,6 +68,7 @@ public class GameActivity extends AppCompatActivity {
                 if(correctstr.equalsIgnoreCase(ansStr))
                 {
                     SP.set(C.USER_LEVEL,++level);
+                    Toast.makeText(GameActivity.this, "Right Answer!", Toast.LENGTH_SHORT).show();
                     Intent i=new Intent(GameActivity.this,GameActivity.class);
                     startActivity(i);
                     finish();
@@ -74,6 +76,7 @@ public class GameActivity extends AppCompatActivity {
                 else
                 {
                     SP.set(C.USER_LEVEL,0);
+                    Toast.makeText(GameActivity.this, "You Lost!", Toast.LENGTH_SHORT).show();
                     Intent i=new Intent(GameActivity.this,StartupActivity.class);
                     startActivity(i);
                     finish();
