@@ -7,6 +7,9 @@
     They lived happily until one day, when a Dragon kidnapped the Princess.\n\n(Swipe to go ahead)</string>
     <string name="story2">The Prince was sad but determined to rescue his love.\n\n(Swipe to go ahead)</string>
     <string name="story3">So he started his Quest of finding the Dragon and saving the Princess.\n\n(Click here to go ahead)</string>
-
+    <string name="q1">What is Alice</string>
+    <string name="ans1">Knight</string>
+    <string name="q2">What is Claire?</string>
+    <string name="ans2">Knave</string>
     <string name="action_settings">Settings</string>
 </resources>

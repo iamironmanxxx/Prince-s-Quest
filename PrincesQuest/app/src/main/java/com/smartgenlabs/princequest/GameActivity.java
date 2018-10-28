@@ -1,5 +1,6 @@
 package com.smartgenlabs.princequest;
 
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,7 +27,7 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
         getSupportActionBar().hide();
 
-        SharedPreference SP=new SharedPreference(this);
+        final SharedPreference SP=new SharedPreference(this);
         level=SP.getInt(C.USER_LEVEL);
 
         linearLayout=findViewById(R.id.linearLayout);
@@ -37,7 +38,47 @@ public class GameActivity extends AppCompatActivity {
         if(level==1)
         {
             inflateLayout(2,level);
+            ques.setText(getString(R.string.q1));
         }
+        else if(level==2)
+        {
+            inflateLayout(2,level);
+            ques.setText(getString(R.string.q2));
+        }
+        else
+        {
+
+        }
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String ansStr=ans.getText().toString().trim();
+                String correctstr;
+                if(level==1) {
+                    correctstr = getString(R.string.ans1);
+                }
+                else
+                {
+                    correctstr=getString(R.string.ans2);
+                }
+                if(correctstr.equalsIgnoreCase(ansStr))
+                {
+                    SP.set(C.USER_LEVEL,++level);
+                    Intent i=new Intent(GameActivity.this,GameActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+                else
+                {
+                    SP.set(C.USER_LEVEL,0);
+                    Intent i=new Intent(GameActivity.this,StartupActivity.class);
+                    startActivity(i);
+                    finish();
+
+                }
+            }
+        });
 
     }
 
@@ -50,7 +91,7 @@ public class GameActivity extends AppCompatActivity {
         }
         else
         {
-            name=new String[2];
+            name=getResources().getStringArray(R.array.name2);
         }
         for(int i=0;i<people;i++)
         {
@@ -68,7 +109,7 @@ public class GameActivity extends AppCompatActivity {
                     }
                     else
                     {
-                        ar= new String[3];
+                        ar= getResources().getStringArray(R.array.level2);
                     }
                     AlertDialog dialog=new AlertDialog.Builder(GameActivity.this).create();
                     View v=LayoutInflater.from(GameActivity.this).inflate(R.layout.dialog,null);
