@@ -22,15 +22,15 @@ public class Users {
         this.name = name;
     }
 
-    public String getLevel() {
+    public int getLevel() {
         return level;
     }
 
-    public void setLevel(String level) {
+    public void setLevel(int level) {
         this.level = level;
     }
 
-    public Users(String uid, String name, String level) {
+    public Users(String uid, String name, int level) {
         this.uid = uid;
         this.name = name;
         this.level = level;
@@ -38,6 +38,15 @@ public class Users {
 
     private String uid;
     private String name;
-    private String level;
+    private int level;
+
+    public void setLevelSP(SharedPreference SP,int level){
+        SP.set("user_level",level);
+    }
+
+    public int getLevelSP(SharedPreference SP){
+        return SP.getInt("user_level");
+
+    }
 
 }
