@@ -26,6 +26,9 @@ public class StoryFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public TextView getText() {
+        return tv;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
