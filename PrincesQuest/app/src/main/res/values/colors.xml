@@ -28,6 +28,6 @@
     <color name="parchment_color_lighter">#EAD486</color>
     <color name="parchment_color_light">#c19242</color>
     <color name="parchment_color_dark">#6b4f22</color>
-    <color name="parchment_color_darker">#2F0A0F</color>
+    <color name="parchment_color_darker">#2f0a0f</color>
     <color name="parchment_color_dark_light">#f6451904</color>
 </resources>

@@ -4,34 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/woodsstag"
     tools:context=".EndGameActivity">
 
+
+    <Button
+        android:id="@+id/quest_end_btn"
+        style="@style/-"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:paddingBottom="5dp"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:text="Thus ends your Quest"
+        android:textAlignment="center"
+        android:textColor="#7b4602"
+        android:textSize="18sp" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/quest_end_btn"
         android:layout_centerHorizontal="true"
         android:adjustViewBounds="true"
-        />
-
-    <TextView
-        android:id="@+id/startup_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/startup_subtitle"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="false"
-        android:background="#AAFFFFFF"
-        android:elevation="1dp"
-        android:text="XFW"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="@android:color/black"
-        android:visibility="gone"
-        app:srcCompat="@drawable/logo200"
-        />
+        app:srcCompat="@drawable/end1trans" />
 
     <View
         android:id="@+id/view"
@@ -71,36 +74,18 @@
         android:orientation="vertical"
         android:padding="10dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:background="#7fff"
-        android:padding="4dp"
-        android:text="Well done Prince! Good Job saving your beloved princess."
-        android:textAlignment="center"
-        android:textColor="@android:color/black" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#7fff"
+            android:padding="4dp"
+            android:text="Well done Prince!\nGood Job saving your beloved princess."
+            android:textAlignment="center"
+            android:textColor="@android:color/black" />
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/quest_end_btn"
-         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:padding="5dp"
-        android:paddingBottom="5dp"
-        android:paddingEnd="5dp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
-        android:paddingStart="5dp"
-        android:paddingTop="5dp"
-        android:text="Thus ends your Quest"
-        android:textAlignment="center"
-        android:textColor="#7b4602"
-        android:textSize="18sp" />
-
 
 
 </RelativeLayout>
