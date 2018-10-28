@@ -1,0 +1,41 @@
+package com.smartgenlabs.princequest;
+
+import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.view.View;
+
+public class ScreenSlidePagerAdapter extends FragmentPagerAdapter {
+
+    private final Context context;
+
+    public ScreenSlidePagerAdapter(FragmentManager fm, Context context) {
+        super(fm);
+        this.context=context;
+    }
+
+    @Override
+    public int getCount() {
+        return 3;
+    }
+
+    @Override
+    public Fragment getItem(int position) {
+        StoryFragment sf=new StoryFragment();
+        switch (position)
+        {
+            case 0: sf.setText(context.getString(R.string.story1));
+                    break;
+            case 1: sf.setText(context.getString(R.string.story2));
+                    break;
+            case 2: sf.setText(context.getString(R.string.story3));
+                    break;
+        }
+
+        return sf;
+    }
+}
