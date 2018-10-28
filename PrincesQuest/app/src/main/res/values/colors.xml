@@ -3,4 +3,31 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+
+    <color name="colorPrimaryDarker">#06104f</color>
+    <color name="colorPrimaryLighter">#cfe4ff</color>
+    <color name="colorPrimaryLight">#85c5fa</color>
+    <color name="colorFocusedHighlight">#f17a0a</color>
+
+    <color name="colorGreen">#7af10a</color>
+    <color name="colorGreenDark">#177504</color>
+    <color name="colorOrangeYellow">#f1a40a</color>
+    <color name="colorRed">#d00000</color>
+
+    <color name="dark_grey">#fd6b6a6a</color>
+    <color name="light_grey">#fdcfcfcf</color>
+    <color name="lighter_grey">#e9e9e9</color>
+    <color name="light_bg">#5766ca</color>
+    <color name="lighter_bg">#909ad6</color>
+    <color name="bg_lighter_tint">#b4ffffff</color>
+    <color name="notice_color_yellow">#b4f5bc11</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="content_bg_color">#dddff1</color>
+    <color name="parchment_color_lighter">#EAD486</color>
+    <color name="parchment_color_light">#c19242</color>
+    <color name="parchment_color_dark">#6b4f22</color>
+    <color name="parchment_color_darker">#2F0A0F</color>
+    <color name="parchment_color_dark_light">#f6451904</color>
 </resources>
