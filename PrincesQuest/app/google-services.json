@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "457693154070",
+    "firebase_url": "https://prince-s-quest.firebaseio.com",
+    "project_id": "prince-s-quest",
+    "storage_bucket": "prince-s-quest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457693154070:android:a39375d39dc8406a",
+        "android_client_info": {
+          "package_name": "com.smartgenlabs.princequest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457693154070-egeo7kejef5b0dlmi7cgmatcq09odnqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDn3GDZS7Ks4SH91zjwtZEePXnDOXXZ-O8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
